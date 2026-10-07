@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bathroom Line Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Bathroom Line Tracker</h1>
+      <p class="subtitle">Made by Ken - Help from AI</p>
+
+      <form id="add-form" class="add-form">
+        <label for="person-name">Add Person</label>
+        <div class="row">
+          <input
+            id="person-name"
+            type="text"
+            name="personName"
+            placeholder="Enter a name"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="add-person">Add</button>
+        </div>
+      </form>
+
+      <div class="list-actions">
+        <button type="button" id="edit-list" class="secondary">Edit List</button>
+        <button type="button" id="remove-person" class="secondary">Remove Person</button>
+        <button type="button" id="reset-list" class="danger">Reset List</button>
+      </div>
+      <p id="mode-hint" class="mode-hint" hidden></p>
+
+      <section class="line-section" aria-live="polite">
+        <h2>Line</h2>
+        <ol id="bathroom-line" class="line-list"></ol>
+        <p id="empty-message" class="empty">The line is empty.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
